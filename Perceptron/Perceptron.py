@@ -48,3 +48,5 @@ y_0 = w[-1][0][0] + w[-1][1][0] * x_0
 plt.plot(x_0, y_0, 'y-', linewidth=2)
 plt.plot(X[1, 0:N], X[2, 0:N], 'bo')
 plt.plot(X[1, N:2 * N], X[2, N:2 * N], 'ro')
+plt.axis([0, 6, -1, 5])
+plt.show()
