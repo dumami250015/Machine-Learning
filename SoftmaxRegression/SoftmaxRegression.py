@@ -33,7 +33,7 @@ def numerical_grad(X, Y, W, cost):
             g[i, j] = (cost(X, Y, W_p) - cost(X, Y, W_n)) / (2 * eps)
     return g
 
-def softmax_regression(X, y, W_init, eta, tol = 1e-4, max_count = 10000):
+def softmax_regression(X, y, W_init, eta, tol = 1e-4, max_count = 100000):
     W = [W_init]
     C = W_init.shape[1]
     Y = convert_labels(y, C)
@@ -111,7 +111,7 @@ cmap = ListedColormap(['#FFDDDD', '#DDDDFF', '#DDFFDD']) # light red, light blue
 # Class 0 = red, Class 1 = green, Class 2 = blue
 cmap_visual = ListedColormap(['#FDBDBD', '#D4FDBE', '#BFDBFE']) # light red, light green, light blue
 plt.contourf(xx, yy, Z, alpha=0.7, cmap=cmap_visual)
-
+ 
 
 # 4. Final Formatting
 plt.xlim(x_min, x_max)
